@@ -41,4 +41,3 @@ struct Fonts {
     static let regular14 = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
     static let regular16 = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
 }
-

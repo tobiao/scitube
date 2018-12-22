@@ -9,5 +9,6 @@ target 'SciTube' do
   pod 'SwiftLint', '~> 0.29.1'
   pod 'Alamofire', '~> 4.8.0'
   pod 'AlamofireImage', '~> 3.5'
+  pod 'RealmSwift', '~> 3.13.0'
 
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 #if DEBUG
 import FLEX
 #endif
@@ -36,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = prepareRootViewController()
         window!.makeKeyAndVisible()
+        
+        setDefaultRealm()
         
         #if DEBUG
         setFlexTapGesture()
@@ -75,6 +78,16 @@ extension AppDelegate {
         let navigationController = UINavigationController(rootViewController: rootViewController)
         
         return navigationController
+    }
+    
+    /// Configures Realm with default setting
+    func setDefaultRealm() {
+        let newSchemaVersion: UInt64 = 1
+        let config = Realm.Configuration(schemaVersion: newSchemaVersion, migrationBlock: { migration, oldSchemaVersion in
+            if oldSchemaVersion < newSchemaVersion {
+            }
+        })
+        Realm.Configuration.defaultConfiguration = config
     }
 }
 
