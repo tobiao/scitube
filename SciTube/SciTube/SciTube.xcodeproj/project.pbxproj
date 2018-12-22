@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		682800A8EC16C676A15BC94B /* Pods_SciTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67F0761D30442BDF9F3BB35 /* Pods_SciTube.framework */; };
 		CE6557A021CE47D00027E332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65579621CE47D00027E332 /* LaunchScreen.storyboard */; };
-		CE6557A121CE47D00027E332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65579721CE47D00027E332 /* Main.storyboard */; };
 		CE6557A221CE47D00027E332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65579921CE47D00027E332 /* ViewController.swift */; };
 		CE6557A321CE47D00027E332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65579B21CE47D00027E332 /* AppDelegate.swift */; };
 		CE6557A421CE47D00027E332 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE65579C21CE47D00027E332 /* Info.plist */; };
@@ -20,7 +19,6 @@
 		AA82DAE2F3BDAEE205503BB5 /* Pods-SciTube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SciTube.release.xcconfig"; path = "Pods/Target Support Files/Pods-SciTube/Pods-SciTube.release.xcconfig"; sourceTree = "<group>"; };
 		B67F0761D30442BDF9F3BB35 /* Pods_SciTube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SciTube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE65579621CE47D00027E332 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CE65579721CE47D00027E332 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE65579921CE47D00027E332 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE65579B21CE47D00027E332 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE65579C21CE47D00027E332 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				CE65579621CE47D00027E332 /* LaunchScreen.storyboard */,
-				CE65579721CE47D00027E332 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -199,7 +196,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6557A021CE47D00027E332 /* LaunchScreen.storyboard in Resources */,
-				CE6557A121CE47D00027E332 /* Main.storyboard in Resources */,
 				CE6557A521CE47D00027E332 /* Assets.xcassets in Resources */,
 				CE6557A421CE47D00027E332 /* Info.plist in Resources */,
 			);
@@ -394,6 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SciTube/Application/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,6 +409,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SciTube/Application/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
