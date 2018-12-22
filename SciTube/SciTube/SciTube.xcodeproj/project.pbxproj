@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		682800A8EC16C676A15BC94B /* Pods_SciTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67F0761D30442BDF9F3BB35 /* Pods_SciTube.framework */; };
 		CEC5E94321CE449500515630 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5E94221CE449500515630 /* AppDelegate.swift */; };
 		CEC5E94521CE449500515630 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5E94421CE449500515630 /* ViewController.swift */; };
 		CEC5E94821CE449500515630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC5E94621CE449500515630 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA82DAE2F3BDAEE205503BB5 /* Pods-SciTube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SciTube.release.xcconfig"; path = "Pods/Target Support Files/Pods-SciTube/Pods-SciTube.release.xcconfig"; sourceTree = "<group>"; };
+		B67F0761D30442BDF9F3BB35 /* Pods_SciTube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SciTube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC5E93F21CE449500515630 /* SciTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC5E94221CE449500515630 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC5E94421CE449500515630 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		CEC5E94921CE449700515630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC5E94C21CE449700515630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC5E94E21CE449700515630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E11201D8B531B337E733683A /* Pods-SciTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SciTube.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SciTube/Pods-SciTube.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682800A8EC16C676A15BC94B /* Pods_SciTube.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37A2AD5FB00747D9F0EA2839 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B67F0761D30442BDF9F3BB35 /* Pods_SciTube.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CEC5E93621CE449500515630 = {
 			isa = PBXGroup;
 			children = (
 				CEC5E94121CE449500515630 /* SciTube */,
 				CEC5E94021CE449500515630 /* Products */,
+				F34EB7215A64F61A191FD48F /* Pods */,
+				37A2AD5FB00747D9F0EA2839 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = SciTube;
 			sourceTree = "<group>";
 		};
+		F34EB7215A64F61A191FD48F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E11201D8B531B337E733683A /* Pods-SciTube.debug.xcconfig */,
+				AA82DAE2F3BDAEE205503BB5 /* Pods-SciTube.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEC5E95121CE449700515630 /* Build configuration list for PBXNativeTarget "SciTube" */;
 			buildPhases = (
+				511AFF8B0AE1E94FB9FBCA4F /* [CP] Check Pods Manifest.lock */,
 				CEC5E93B21CE449500515630 /* Sources */,
 				CEC5E93C21CE449500515630 /* Frameworks */,
 				CEC5E93D21CE449500515630 /* Resources */,
+				0E21466E42392AE76336E54B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E21466E42392AE76336E54B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SciTube/Pods-SciTube-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SciTube/Pods-SciTube-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		511AFF8B0AE1E94FB9FBCA4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SciTube-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEC5E93B21CE449500515630 /* Sources */ = {
@@ -278,6 +351,7 @@
 		};
 		CEC5E95221CE449700515630 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E11201D8B531B337E733683A /* Pods-SciTube.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +369,7 @@
 		};
 		CEC5E95321CE449700515630 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA82DAE2F3BDAEE205503BB5 /* Pods-SciTube.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

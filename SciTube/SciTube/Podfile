@@ -1,0 +1,11 @@
+platform :ios, '11.0'
+swift_version = "4.1"
+use_frameworks!
+inhibit_all_warnings!
+
+target 'SciTube' do
+  
+  pod 'FLEX', '~> 2.4.0', :configurations => ['Debug']
+  pod 'SwiftLint', '~> 0.29.1'
+
+end
