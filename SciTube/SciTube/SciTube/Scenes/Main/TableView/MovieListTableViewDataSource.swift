@@ -13,17 +13,23 @@ final class MovieListTableViewDataSource: NSObject {
     // MARK: Constants
     
     // MARK: Variables
+    var movies: [Movie] = []
     
     // MARK: IBActions
     
     // MARK: Implementation
+    public func sortMoviesByDescriptionLengthAscending(_ movies: [Movie]) -> [Movie] {
+        return movies.sorted(by: { (first, second) -> Bool in
+            return first.desc.count < second.desc.count
+        })
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension MovieListTableViewDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5 //TODO: remove placeholder
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,6 +39,7 @@ extension MovieListTableViewDataSource: UITableViewDataSource {
     }
     
     private func configureMovieCell(_ cell: MovieTableViewCell, for indexPath: IndexPath) {
-        // TODO: add configuration
+        let movie = movies[indexPath.row]
+        cell.setupCell(title: movie.title, movieDescription: movie.desc, miniatureUrl: movie.thumbnails.standard.url)
     }
 }
