@@ -71,8 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     private func prepareRootViewController() -> UINavigationController {
-        let rootViewController = UIViewController()
-        rootViewController.view.backgroundColor = .white
+        let rootViewController = MoviesListViewController()
         let navigationController = UINavigationController(rootViewController: rootViewController)
         
         return navigationController
