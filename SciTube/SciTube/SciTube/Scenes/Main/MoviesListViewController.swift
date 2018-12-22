@@ -21,6 +21,18 @@ final class MoviesListViewController: UIViewController {
 
         setupNavigationBar()
         setupTableView()
+        
+        APIClient.getMovies { [weak self] result in
+            guard let strongSelf = self else { return }
+            switch result {
+            case .success(let searchResponse):
+                let movies = searchResponse.items.compactMap { return $0.movie }
+                strongSelf.tableViewDataSource.movies = strongSelf.tableViewDataSource.sortMoviesByDescriptionLengthAscending(movies)
+                strongSelf.tableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func setupNavigationBar() {
@@ -39,7 +51,8 @@ final class MoviesListViewController: UIViewController {
         tableView.registerNib(forClass: MovieTableViewCell.self)
         tableView.dataSource = tableViewDataSource
         tableView.allowsSelection = false
-        tableView.rowHeight = 160
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 160
         tableView.backgroundColor = .clear
         tableView.tableFooterView = UIView()
     }
