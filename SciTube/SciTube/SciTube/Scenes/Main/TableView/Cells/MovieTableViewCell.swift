@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 final class MovieTableViewCell: UITableViewCell {
     
@@ -23,17 +25,26 @@ final class MovieTableViewCell: UITableViewCell {
     
     private func prepareCell() {
         self.ivMiniature.image = nil
+        self.ivMiniature.contentMode = .scaleAspectFit
         
         self.lblTitle.textColor = Colors.main
         self.lblDescription.textColor = Colors.textGray
         
         self.lblTitle.font = Fonts.regular16
         self.lblDescription.font = Fonts.regular16
+        
+        self.lblTitle.numberOfLines = 0
+        self.lblTitle.lineBreakMode = .byWordWrapping
+        
+        self.lblDescription.numberOfLines = 0
+        self.lblDescription.lineBreakMode = .byWordWrapping
     }
     
-    public func setupCell(title: String, movieDescription: String, miniatureUrl: String?) {
+    public func setupCell(title: String, movieDescription: String, miniatureUrl: URL) {
         self.lblTitle.text = title
         self.lblDescription.text = movieDescription
-        // TODO: add kingfisher
+        Alamofire.request(miniatureUrl).responseImage { [weak self] response in
+            self?.ivMiniature.image = response.result.value
+        }
     }
 }

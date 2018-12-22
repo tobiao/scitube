@@ -20,22 +20,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eC1-Bi-Y4j">
-                        <rect key="frame" x="8" y="8" width="160.5" height="160.5"/>
+                        <rect key="frame" x="8" y="28.5" width="160" height="120"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="eC1-Bi-Y4j" secondAttribute="height" multiplier="1:1" id="tI8-Km-0et"/>
+                            <constraint firstAttribute="height" constant="120" id="XlN-yT-2rh"/>
+                            <constraint firstAttribute="width" secondItem="eC1-Bi-Y4j" secondAttribute="height" multiplier="4:3" id="tI8-Km-0et"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rI2-fZ-2b2">
-                        <rect key="frame" x="184.5" y="8" width="173.5" height="160.5"/>
+                        <rect key="frame" x="184" y="8" width="174" height="160.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" text="channel description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl3-hN-T2n">
-                                <rect key="frame" x="0.0" y="20.5" width="173.5" height="140"/>
+                                <rect key="frame" x="0.0" y="20.5" width="174" height="140"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWq-5f-6Qh">
-                                <rect key="frame" x="0.0" y="0.0" width="173.5" height="21"/>
+                                <rect key="frame" x="0.0" y="0.0" width="174" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,13 +56,12 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="eC1-Bi-Y4j" secondAttribute="bottom" constant="8" id="7zl-Ea-exv"/>
+                    <constraint firstAttribute="bottom" secondItem="rI2-fZ-2b2" secondAttribute="bottom" constant="8" id="5UW-1c-PmX"/>
                     <constraint firstItem="eC1-Bi-Y4j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="9Na-aA-orr"/>
                     <constraint firstItem="rI2-fZ-2b2" firstAttribute="leading" secondItem="eC1-Bi-Y4j" secondAttribute="trailing" constant="16" id="9oU-uL-Kzr"/>
                     <constraint firstAttribute="trailing" secondItem="rI2-fZ-2b2" secondAttribute="trailing" constant="16" id="ACh-ZO-T4Y"/>
-                    <constraint firstItem="rI2-fZ-2b2" firstAttribute="top" secondItem="eC1-Bi-Y4j" secondAttribute="top" id="GSL-1f-pvG"/>
-                    <constraint firstItem="eC1-Bi-Y4j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pSx-NG-l8G"/>
-                    <constraint firstItem="rI2-fZ-2b2" firstAttribute="bottom" secondItem="eC1-Bi-Y4j" secondAttribute="bottom" id="wST-6z-HqT"/>
+                    <constraint firstItem="rI2-fZ-2b2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="IgQ-94-TdP"/>
+                    <constraint firstItem="eC1-Bi-Y4j" firstAttribute="centerY" secondItem="rI2-fZ-2b2" secondAttribute="centerY" id="Lxe-qN-Goj"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
