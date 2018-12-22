@@ -22,17 +22,7 @@ final class MoviesListViewController: UIViewController {
         setupNavigationBar()
         setupTableView()
         
-        APIClient.getMovies { [weak self] result in
-            guard let strongSelf = self else { return }
-            switch result {
-            case .success(let searchResponse):
-                let movies = searchResponse.items.compactMap { return $0.movie }
-                strongSelf.tableViewDataSource.movies = strongSelf.tableViewDataSource.sortMoviesByDescriptionLengthAscending(movies)
-                strongSelf.tableView.reloadData()
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+        requestMovies()
     }
     
     private func setupNavigationBar() {
@@ -55,5 +45,19 @@ final class MoviesListViewController: UIViewController {
         tableView.estimatedRowHeight = 160
         tableView.backgroundColor = .clear
         tableView.tableFooterView = UIView()
+    }
+    
+    private func requestMovies() {
+        APIClient.getMovies { [weak self] result in
+            guard let strongSelf = self else { return }
+            switch result {
+            case .success(let searchResponse):
+                let movies = searchResponse.items.compactMap { return $0.movie }
+                strongSelf.tableViewDataSource.movies = strongSelf.tableViewDataSource.sortMoviesByDescriptionLengthAscending(movies)
+                strongSelf.tableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
