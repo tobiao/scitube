@@ -7,17 +7,39 @@
 //
 
 import UIKit
+#if DEBUG
+import FLEX
+#endif
+
+private struct Action {
+    private init() {}
+    
+    static let flexTapGestureAction = #selector(AppDelegate.handleThreeFingerTap(tapRecognizer:))
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    #if DEBUG
+    private var flexGestureRecognizer: UITapGestureRecognizer? = nil {
+        didSet {
+            if let tapRecognizer = flexGestureRecognizer {
+                window?.addGestureRecognizer(tapRecognizer)
+            }
+        }
+    }
+    #endif
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = prepareRootViewController()
         window!.makeKeyAndVisible()
+        
+        #if DEBUG
+        setFlexTapGesture()
+        #endif
         
         return true
     }
@@ -56,3 +78,21 @@ extension AppDelegate {
         return navigationController
     }
 }
+
+// MARK: - FLEX
+#if DEBUG
+private extension AppDelegate {
+    
+    func setFlexTapGesture() {
+        flexGestureRecognizer = UITapGestureRecognizer(target: self, action: Action.flexTapGestureAction)
+        flexGestureRecognizer?.numberOfTapsRequired = 2
+        flexGestureRecognizer?.numberOfTouchesRequired = 3
+    }
+    
+    @objc func handleThreeFingerTap(tapRecognizer: UITapGestureRecognizer) {
+        if tapRecognizer.state == .recognized {
+            FLEXManager.shared().showExplorer()
+        }
+    }
+}
+#endif
