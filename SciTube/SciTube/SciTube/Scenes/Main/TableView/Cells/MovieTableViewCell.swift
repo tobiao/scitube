@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieTableViewCell: UITableViewCell {
+final class MovieTableViewCell: UITableViewCell {
     
     // Outlets
     @IBOutlet weak var ivMiniature: UIImageView!
@@ -17,6 +17,23 @@ class MovieTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        prepareCell()
+    }
+    
+    private func prepareCell() {
+        self.ivMiniature.image = nil
+        
+        self.lblTitle.textColor = Colors.main
+        self.lblDescription.textColor = Colors.textGray
+        
+        self.lblTitle.font = Fonts.regular16
+        self.lblDescription.font = Fonts.regular16
+    }
+    
+    public func setupCell(title: String, movieDescription: String, miniatureUrl: String?) {
+        self.lblTitle.text = title
+        self.lblDescription.text = movieDescription
+        // TODO: add kingfisher
     }
 }
