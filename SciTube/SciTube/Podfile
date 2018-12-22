@@ -8,5 +8,6 @@ target 'SciTube' do
   pod 'FLEX', '~> 2.4.0', :configurations => ['Debug']
   pod 'SwiftLint', '~> 0.29.1'
   pod 'Alamofire', '~> 4.8.0'
+  pod 'AlamofireImage', '~> 3.5'
 
 end
