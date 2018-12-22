@@ -8,6 +8,21 @@
 
 import UIKit
 
+struct ProductionServer {
+    static let baseURL = "http://api.norbsoft.com/sciTube/v2"
+}
+
+enum HTTPHeaderField: String {
+    case authentication = "Authorization"
+    case contentType = "Content-Type"
+    case acceptType = "Accept"
+    case acceptEncoding = "Accept-Encoding"
+}
+
+enum ContentType: String {
+    case json = "application/json"
+}
+
 struct Colors {
 
     private init() { }
@@ -26,3 +41,4 @@ struct Fonts {
     static let regular14 = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
     static let regular16 = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
 }
+
