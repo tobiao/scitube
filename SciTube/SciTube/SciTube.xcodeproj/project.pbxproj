@@ -17,6 +17,8 @@
 		CE6557B221CE4A740027E332 /* MovieListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6557B121CE4A740027E332 /* MovieListTableViewDataSource.swift */; };
 		CE6557B521CE4A960027E332 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6557B321CE4A960027E332 /* MovieTableViewCell.swift */; };
 		CE6557B621CE4A960027E332 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6557B421CE4A960027E332 /* MovieTableViewCell.xib */; };
+		CE6557BA21CE4DDD0027E332 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6557B921CE4DDD0027E332 /* TableViewExtension.swift */; };
+		CE6557BC21CE4E040027E332 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6557BB21CE4E040027E332 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		CE6557B121CE4A740027E332 /* MovieListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewDataSource.swift; sourceTree = "<group>"; };
 		CE6557B321CE4A960027E332 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CE6557B421CE4A960027E332 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		CE6557B921CE4DDD0027E332 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
+		CE6557BB21CE4E040027E332 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CEC5E93F21CE449500515630 /* SciTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11201D8B531B337E733683A /* Pods-SciTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SciTube.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SciTube/Pods-SciTube.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +62,9 @@
 		CE65579421CE47CF0027E332 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				CE6557B821CE4DCA0027E332 /* Extensions */,
+				CE6557B721CE4DCA0027E332 /* Networking */,
+				CE6557BB21CE4E040027E332 /* Constants.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -129,6 +136,21 @@
 				CE6557B421CE4A960027E332 /* MovieTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE6557B721CE4DCA0027E332 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CE6557B821CE4DCA0027E332 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE6557B921CE4DDD0027E332 /* TableViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CEC5E93621CE449500515630 = {
@@ -303,6 +325,8 @@
 				CE6557B021CE4A050027E332 /* MoviesListViewController.swift in Sources */,
 				CE6557B521CE4A960027E332 /* MovieTableViewCell.swift in Sources */,
 				CE6557B221CE4A740027E332 /* MovieListTableViewDataSource.swift in Sources */,
+				CE6557BA21CE4DDD0027E332 /* TableViewExtension.swift in Sources */,
+				CE6557BC21CE4E040027E332 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
